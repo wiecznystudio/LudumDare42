@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class LoadData : MonoBehaviour {
 
-	public void Load() {
+	public static void Load() {
 		
-		for(int i = 0; i < 25; i++) {
+		for(int i = 0; i < 28; i++) {
 			// load ulocked items
 			int unlocked = PlayerPrefs.GetInt("unlockedItem" + i, 0);
 			GameManager.Instance.unlockedItems[i] = (unlocked == 1);
@@ -17,6 +17,12 @@ public class LoadData : MonoBehaviour {
 		}
 		// default value
 		GameManager.Instance.possibleItems[0] = true;
+		GameManager.Instance.possibleItems[1] = true;
+		GameManager.Instance.possibleItems[2] = true;
+		GameManager.Instance.possibleItems[3] = true;
+		GameManager.Instance.unlockedItems[0] = true;
+		GameManager.Instance.unlockedItems[1] = true;
+		GameManager.Instance.unlockedItems[11] = true;
 		
 	}
 }

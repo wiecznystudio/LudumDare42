@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveData : MonoBehaviour {
+	
+	public static void Save() {
 
-	public void Save() {
-
-		for(int i = 0; i < 25; i++) {
+		for(int i = 0; i < 28; i++) {
 			// load ulocked items
 			PlayerPrefs.SetInt("unlockedItem" + i, GameManager.Instance.unlockedItems[i] ? 1 : 0);
 

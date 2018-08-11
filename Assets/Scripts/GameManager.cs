@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -13,9 +14,13 @@ public class GameManager : MonoBehaviour {
 
 	// variables
 	public Animator menuAnimator;
+	public Slider progressBar;
+	public Transform itemPanels;
 
-	public bool[] unlockedItems = new bool[25];
-	public bool[] possibleItems = new bool[25];
+	private int unlockedItemAmount = 0;
+
+	public bool[] unlockedItems;
+	public bool[] possibleItems;
 
 	// unity functions
 	void Awake() {
@@ -28,7 +33,10 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	void Start () {
-		
+		unlockedItems = new bool[28];
+		possibleItems = new bool[28];
+
+		LoadData.Load();
 	}
 
 	void Update () {
@@ -43,8 +51,30 @@ public class GameManager : MonoBehaviour {
 	}
 	public void Collection() {
 		menuAnimator.Play("MenuToCollection");
+
+		UpdateProgressBar();
+		UpdateIcons();
 	}
 	public void ExitGame() {
 		Application.Quit();
+	}
+	public void Back() {
+		menuAnimator.Play("CollectionToStart");
+	}
+	// update stuff
+	public void UpdateProgressBar() {
+		unlockedItemAmount = 0;
+		foreach(bool unlocked in unlockedItems) {
+			if(unlocked) {
+				unlockedItemAmount++;
+			}
+		}
+		progressBar.value = unlockedItemAmount;
+	}
+	public void UpdateIcons() {
+		for(int i = 0; i < 28; i++) {
+			MenuItem item = GameObject.Find("Item" + i + "Panel").GetComponent<MenuItem>();
+			item.Set(unlockedItems[i]);
+		}
 	}
 }
