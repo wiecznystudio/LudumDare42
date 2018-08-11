@@ -18,7 +18,7 @@ public class Destroyable : MonoBehaviour {
 			time += Time.deltaTime;
 
 		if(time/destroyTime >= 0.3f) {
-			if(!smokeIsPlaying) {
+			if(!smokeIsPlaying) { // play smoke anim after 30% of destroy time
 				smokeId = EffectController.Instance.PlaySmoke(this.transform.position);
 
 				smokeIsPlaying = true;
@@ -26,11 +26,12 @@ public class Destroyable : MonoBehaviour {
 		}
 
 		if(time >= destroyTime) {
-			if(!explosionIsPlaying) {
+			if(!explosionIsPlaying) { // play explosion anim
 				EffectController.Instance.StopSmoke(smokeId);
 				EffectController.Instance.PlayExplosion(this.transform.position);
 				
 				explosionIsPlaying = true;
+				this.GetComponent<Collider2D>().enabled = false;
 			}
 		}
 

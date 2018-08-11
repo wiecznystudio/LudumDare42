@@ -9,50 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1393676201419302}
+  m_RootGameObject: {fileID: 1211527506951826}
   m_IsPrefabAsset: 1
---- !u!1 &1393676201419302
+--- !u!1 &1211527506951826
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4720165826897318}
-  - component: {fileID: 114111927916985146}
+  - component: {fileID: 4145545970689882}
+  - component: {fileID: 114264520660536902}
   m_Layer: 0
-  m_Name: EffectController
+  m_Name: ItemList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4720165826897318
+--- !u!4 &4145545970689882
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1393676201419302}
+  m_GameObject: {fileID: 1211527506951826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4772368, y: 0.1812039, z: -1.0498047}
+  m_LocalPosition: {x: 641.51215, y: 601.24396, z: -5.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114111927916985146
+--- !u!114 &114264520660536902
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1393676201419302}
+  m_GameObject: {fileID: 1211527506951826}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ffe36fd7d38d2d4480be0b959bebd8f, type: 3}
+  m_Script: {fileID: 11500000, guid: f49d986cbe3b4b145acea14d1e27346f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  explosionPrefab: {fileID: 1225306760484174, guid: 5d33260621484d14d9d03fb93713b069,
-    type: 2}
-  smokePrefab: {fileID: 1954100911642874, guid: bd9c048f7de6e4844a706d135d1c607d,
-    type: 2}
+  items: []

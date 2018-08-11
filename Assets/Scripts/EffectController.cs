@@ -15,6 +15,7 @@ public class EffectController : MonoBehaviour {
 	public GameObject explosionPrefab;
 	public GameObject smokePrefab;
 
+	// all active effects lists
 	private List<Transform> smokeObjects = new List<Transform>();
 	private List<Transform> explosionObjects = new List<Transform>();
 
@@ -35,7 +36,7 @@ public class EffectController : MonoBehaviour {
 	}
 
 	// effect controller functions
-	public int PlaySmoke(Vector3 pos) {
+	public int PlaySmoke(Vector3 pos) { // add smoke effect and return id
 		GameObject smokeObject = GameObject.Instantiate(smokePrefab, pos, Quaternion.identity);
 		smokeObject.transform.localPosition += new Vector3(0, 0, -3);
 		smokeObject.transform.SetParent(this.transform);
@@ -48,7 +49,7 @@ public class EffectController : MonoBehaviour {
 		smokeObjects[id].GetComponent<ParticleSystem>().loop = false;
 	}
 
-	public int PlayExplosion(Vector3 pos) {
+	public int PlayExplosion(Vector3 pos) {  // add explosion effect and return id
 		GameObject explosionObject = GameObject.Instantiate(explosionPrefab, pos, Quaternion.identity);
 		explosionObject.transform.localPosition += new Vector3(0, 0, -3);
 		explosionObject.transform.SetParent(this.transform);

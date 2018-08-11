@@ -7,14 +7,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	// variables
-	public Transform playerGang;
-	public float speed = 3f;
+	public float speed = 2f;
 
 	private Vector3 destination;
 	private Camera cam;
 	private Animator[] guysAnim;
 	private float[] animTime;
 	private bool isMoving = false;
+	private bool isCollide = false;
 
 	// unity functions
 	void Start () {
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+		// player gang movement
 		if(Input.GetMouseButtonDown(0)) {
 			Vector2 mousePos = Input.mousePosition;
 			destination = cam.ScreenToWorldPoint(mousePos);
@@ -40,11 +41,15 @@ public class PlayerController : MonoBehaviour {
 
 			transform.position += heading * speed * Time.deltaTime;
 			
+			if(isCollide)
+				return;
+
+			// move anim
 			if(!isMoving) {
 				SetAnimation("GuyMove");
 				isMoving = true;
 			}
-
+			// stop if almost in destination
 			if(Vector3.Distance(transform.position, destination) <= 0.05f) {
 				transform.position = destination;
 				destination = Vector3.zero;
@@ -53,17 +58,24 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 	}
+	// destrony anim when on object
+	void OnTriggerStay2D(Collider2D other) {
+		if(isCollide)
+			return;
+
+		isCollide = true;
+		SetAnimation("GuyDestroy");	
+	}
+	void OnTriggerExit2D(Collider2D other) {
+		isCollide = false;
+	}
 
 	// player controller functions
-
-
 	void SetAnimation(string animation) {
-		// foreach(Animator anim in guysAnim) {
-		// 	anim.SetBool("isMoving", moving);
-		// }
 		for(int i = 0; i < animTime.Length; i++) {
 			animTime[i] = Random.Range(0.0f, 0.5f);
 			guysAnim[i].Play(animation, -1, animTime[i]);
+			guysAnim[i].speed = animTime[i] + 0.7f;
 		}
 	}
 }
