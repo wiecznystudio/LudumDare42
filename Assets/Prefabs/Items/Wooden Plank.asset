@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572fcfb3c8c7d64419d26c7bee53b680, type: 3}
   m_Name: Wooden Plank
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
+  itemID: 0
+  itemIcon: {fileID: 21300000, guid: 861fdd56796a24a4ebd4a2bf0fdf9a70, type: 3}
   itemName: Wooden Plank
   itemDesc: 
+  chance: 0

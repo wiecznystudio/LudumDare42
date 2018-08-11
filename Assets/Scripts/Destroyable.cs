@@ -5,12 +5,16 @@ using UnityEngine;
 public class Destroyable : MonoBehaviour {
 
 	// variables
+	public Sprite destroySprite;
 	public float destroyTime = 3f;
 	
 	private float time = 0f;
 	private bool collide = false;
 	private bool smokeIsPlaying = false, explosionIsPlaying = false;
 	private int smokeId;
+
+	// items
+	public int itemDrop;
 
 	// unity functions
 	void Update() {
@@ -32,11 +36,19 @@ public class Destroyable : MonoBehaviour {
 				
 				explosionIsPlaying = true;
 				this.GetComponent<Collider2D>().enabled = false;
+				this.GetComponent<SpriteRenderer>().sprite = destroySprite;
+				ChooseItem();
 			}
 		}
-
-
 	}
+
+	// object functions
+
+	void ChooseItem() {
+
+		ItemList.Instance.AddItem(itemDrop, this.transform.position);
+	}
+
 
 
 	// check if player is on object

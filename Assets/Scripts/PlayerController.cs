@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
 	private Vector3 destination;
 	private Camera cam;
 	private Animator[] guysAnim;
+	private SpriteRenderer[] renderers;
 	private float[] animTime;
 	private bool isMoving = false;
 	private bool isCollide = false;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		cam = Camera.main;
 		guysAnim = GetComponentsInChildren<Animator>();
+		renderers = GetComponentsInChildren<SpriteRenderer>();
 		animTime = new float[guysAnim.Length];
 		SetAnimation("GuyIdle");
 	}
@@ -40,6 +42,13 @@ public class PlayerController : MonoBehaviour {
 			heading.Normalize();
 
 			transform.position += heading * speed * Time.deltaTime;
+
+			// sprite flip x
+			if(heading.x > 0f) {
+				FlipX(false);
+			} else {
+				FlipX(true);
+			}
 			
 			if(isCollide)
 				return;
@@ -71,6 +80,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// player controller functions
+	void FlipX(bool x) {
+		foreach(SpriteRenderer sr in renderers) {
+			sr.flipX = x;
+		}
+	}
 	void SetAnimation(string animation) {
 		for(int i = 0; i < animTime.Length; i++) {
 			animTime[i] = Random.Range(0.0f, 0.5f);
