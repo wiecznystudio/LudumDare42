@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 12 Dimensional Gun
   m_EditorClassIdentifier: 
   itemID: 12
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: d355eb44d28feda4aad677a8578e04e0, type: 3}
   itemName: Dimensional Gun
-  itemDesc: 
+  itemDesc: With this gun I can eat Szechuan Sauce whenever i want!
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 10100
+  rareC: 1

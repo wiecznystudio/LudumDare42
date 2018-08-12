@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 11 Door To Woods
   m_EditorClassIdentifier: 
   itemID: 11
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 295db50ed23606941990f5920fcb2897, type: 3}
   itemName: Door to Woods
-  itemDesc: 
+  itemDesc: Oh yeaah, now I will be able to enter the forest!
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 10000
+  rareC: 1

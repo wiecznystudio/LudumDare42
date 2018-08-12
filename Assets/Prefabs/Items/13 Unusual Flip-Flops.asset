@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 13 Unusual Flip-Flops
   m_EditorClassIdentifier: 
   itemID: 13
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: d13ab4b07be19914487a3b6b86b25d6d, type: 3}
   itemName: Unusual Flip-Flops
-  itemDesc: 
+  itemDesc: Cool for the swimming pool.
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 8300
+  rareC: 1

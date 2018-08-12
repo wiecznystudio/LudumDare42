@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
 	void Awake() {
 		if(instance == null) {
 			instance = this;
+			Screen.SetResolution(1290, 720, FullScreenMode.Windowed);
 			//DontDestroyOnLoad(this.gameObject);
 		} else if(instance != this) {
 			Destroy(this.gameObject);

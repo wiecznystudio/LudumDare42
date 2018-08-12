@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: 24 Planet Destroyer
   m_EditorClassIdentifier: 
   itemID: 24
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: a2abe118ca30f9042afc932fed52ff6e, type: 3}
   itemName: Planet Destroyer
-  itemDesc: 
+  itemDesc: Maybe this Moon creature will give a Cake to Gary? In the end he is not
+    prisoner anymore.
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 150000
+  rareC: 2

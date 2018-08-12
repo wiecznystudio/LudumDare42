@@ -37,9 +37,9 @@ public class CollectionController : MonoBehaviour {
 		name.text = item.itemName;
 		desc.text = item.itemDesc;
 		rare.color = item.rare;
-		if(item.rare.b > 0.7f) {
+		if(item.rareC == 0) {
 			rare.text = "Common";
-		} else if(item.rare.g > 0.2f) {
+		} else if(item.rareC == 1) {
 			rare.text = "Rare";
 		} else rare.text = "Legendary";
 		number.text = "x " + GameManager.Instance.amountItems[item.itemID].ToString();

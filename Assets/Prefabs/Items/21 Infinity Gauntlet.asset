@@ -14,7 +14,9 @@ MonoBehaviour:
   itemID: 21
   itemIcon: {fileID: 21300000, guid: c9b84ab90d688e84ab1beffd6d789bd6, type: 3}
   itemName: Infinity Gauntlet
-  itemDesc: 
+  itemDesc: "This gauntlet fell out from strange purple guy. Oh! There's a paper inside\u2026
+    (do not snap you finger)."
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 60000
+  rareC: 2

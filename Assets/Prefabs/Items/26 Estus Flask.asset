@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 26 Estus Flask
   m_EditorClassIdentifier: 
   itemID: 26
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 8e3932a5abd6adb4c9594cdd1e3680e3, type: 3}
   itemName: Estus Flask
-  itemDesc: 
+  itemDesc: Praise the sun!
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 78900
+  rareC: 2

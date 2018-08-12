@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 17 Christmas Lights
   m_EditorClassIdentifier: 
   itemID: 17
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: f22e2607c7a8ff049ba9222d3f272217, type: 3}
   itemName: Christmas Lights
-  itemDesc: 
+  itemDesc: "Who don\u2019t like lights, especially christmas lights?"
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 2800
+  rareC: 1

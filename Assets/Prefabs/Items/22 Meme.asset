@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 22 Meme
   m_EditorClassIdentifier: 
   itemID: 22
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: e3c1c16bd4806e6419b0544e145a9b7a, type: 3}
   itemName: Meme
-  itemDesc: 
+  itemDesc: Ancient communication technique created by people from the future.
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 9000
+  rareC: 1

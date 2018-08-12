@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: 27 Gtx 2000 Series
   m_EditorClassIdentifier: 
   itemID: 27
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 2df65c0557385384792477756aab0840, type: 3}
   itemName: Gtx 2000 Series
-  itemDesc: 
+  itemDesc: THIS is special reward for collecting all of items. You can take this
+    card and play games... with thousand of FPS!
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 9999999
+  rareC: 2

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 15 Living Word
   m_EditorClassIdentifier: 
   itemID: 15
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 8d5de3f2170723a488c689ecee15725d, type: 3}
   itemName: Living Word
-  itemDesc: 
+  itemDesc: Words. Can. Hurt.
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 4500
+  rareC: 1

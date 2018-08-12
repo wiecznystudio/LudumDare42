@@ -12,7 +12,7 @@ public class MenuCamera : MonoBehaviour {
 		hue = Random.Range(0.000f, 1.000f);
 	}
 	
-	void Update() {
+	void UpdateHehe() {
 		hue += 0.001f;
 		if(hue >= 1) hue = 0;
 

@@ -14,7 +14,8 @@ MonoBehaviour:
   itemID: 16
   itemIcon: {fileID: 21300000, guid: 7026a93bd1fa7524a85963c5887fe52c, type: 3}
   itemName: Jezus
-  itemDesc: 
+  itemDesc: He is my best friend, He always has good vine.
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 1111111
+  rareC: 2

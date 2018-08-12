@@ -14,7 +14,9 @@ MonoBehaviour:
   itemID: 9
   itemIcon: {fileID: 21300000, guid: 721426b56767ced4c93cac42b847fc20, type: 3}
   itemName: U-Boot
-  itemDesc: 
+  itemDesc: Yep, this is submarine. Tell me one thing, where do you want to store
+    it?
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 3000
+  rareC: 1

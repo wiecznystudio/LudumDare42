@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadData : MonoBehaviour {
 
 	public static void Load() {
+		//PlayerPrefs.DeleteAll();
 		for(int i = 0; i < 28; i++) {
 			// load ulocked items
 			int unlocked = PlayerPrefs.GetInt("unlockedItem" + i, 0);

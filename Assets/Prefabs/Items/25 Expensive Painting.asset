@@ -14,7 +14,9 @@ MonoBehaviour:
   itemID: 25
   itemIcon: {fileID: 21300000, guid: 2585fdffac831d048acc01f1471d6268, type: 3}
   itemName: Expensive Painting
-  itemDesc: 
+  itemDesc: I can sell you this painting for 43,86 milions dollars. What? Why are
+    you leaving?
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 4386
+  rareC: 1

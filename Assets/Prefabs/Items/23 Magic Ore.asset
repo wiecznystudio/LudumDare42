@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Name: 23 Magic Ore
   m_EditorClassIdentifier: 
   itemID: 23
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: ff1cab93fd1fd95468d4697b4cb0019d, type: 3}
   itemName: Magic Ore
-  itemDesc: 
+  itemDesc: Ian once told me that weapons forged of this ore don't break and are sharper
+    than normal blades.
   chance: 50
   rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
   score: 1
+  rareC: 1

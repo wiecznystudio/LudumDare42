@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Name: 18 Llama
   m_EditorClassIdentifier: 
   itemID: 18
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: c8a2bbea95546594e88d50330e1b6381, type: 3}
   itemName: Llama
-  itemDesc: 
+  itemDesc: I got a Llama in my living room.
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 35000
+  rareC: 2
