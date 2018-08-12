@@ -25,6 +25,11 @@ public class LoadData : MonoBehaviour {
 		GameManager.Instance.possibleItems[0] = true;
 		GameManager.Instance.possibleItems[1] = true;
 		GameManager.Instance.possibleItems[2] = true;
+		GameManager.Instance.possibleItems[3] = true;
+		GameManager.Instance.possibleItems[4] = true;
+		GameManager.Instance.possibleItems[5] = true;
+		GameManager.Instance.possibleItems[6] = true;
+		GameManager.Instance.possibleItems[8] = true;
 		
 	}
 }

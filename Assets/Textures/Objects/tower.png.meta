@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: bcadbe91596dbeb43b7087bccf0e6caa
+guid: c9c0cd50217be974c98dd6404db9c031
 TextureImporter:
   fileIDToRecycleName:
-    21300000: castle_0
-    21300002: castle_1
+    21300000: tower_0
+    21300002: tower_1
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: castle_0
+      name: tower_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
-        width: 50
-        height: 30
+        y: 0
+        width: 20
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ca4427764ac1684dbfe5cf9d72f043c
+      spriteID: 0161bb78a6beba841b6231252b100984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: castle_1
+      name: tower_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 20
         y: 0
-        width: 50
-        height: 30
+        width: 20
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c51f0b3ef0b374683dadbe70233d74
+      spriteID: f9146daef27bf3044af95d43f6b59871
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fb1a062fe94680346a3da21002b2a546
+    spriteID: f49e587f5d2452043bcafe29b7c6d03b
     vertices: []
     indices: 
     edges: []

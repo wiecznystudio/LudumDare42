@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour {
 	void Awake() {
 		if(instance == null) {
 			instance = this;
-			DontDestroyOnLoad(this.gameObject);
+			//DontDestroyOnLoad(this.gameObject);
 		} else if(instance != this) {
 			Destroy(this.gameObject);
 		}
@@ -56,11 +56,18 @@ public class GameManager : MonoBehaviour {
 		UpdateProgressBar();
 		UpdateIcons();
 	}
+
+	public void Stats() {
+		menuAnimator.Play("MenuToStats");
+	}
 	public void ExitGame() {
 		Application.Quit();
 	}
-	public void Back() {
+	public void BackCollection() {
 		menuAnimator.Play("CollectionToStart");
+	}
+	public void BackStats() {
+		menuAnimator.Play("StatsToStart");
 	}
 	// update stuff
 	public void UpdateProgressBar() {

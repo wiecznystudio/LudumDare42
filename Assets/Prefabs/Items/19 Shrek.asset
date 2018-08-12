@@ -14,7 +14,7 @@ MonoBehaviour:
   itemID: 19
   itemIcon: {fileID: 0}
   itemName: Shrek
-  itemDesc: 
+  itemDesc: Somebody once told him, the world is gonna roll him...
   chance: 20
   rare: {r: 1, g: 0.76686984, b: 0, a: 1}
   score: 35000

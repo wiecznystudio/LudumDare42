@@ -17,6 +17,7 @@ public class FinishController : MonoBehaviour {
 	public Animator gameAnim;
 
 	public Text[] itemText;
+	public Text newItems;
 
 	// unity functions
 	void Awake () {
@@ -35,7 +36,7 @@ public class FinishController : MonoBehaviour {
 
 	public void FinishGame() {
 		isFinish = true;
-		gameAnim.Play("Finish");
+		gameAnim.SetBool("isFinish", isFinish);
 
 		// update item texts
 		for(int i = 0; i < ItemList.Instance.itemsInInventory; i++) {
@@ -55,13 +56,15 @@ public class FinishController : MonoBehaviour {
 	}
 
 	void CheckForPossible() {
-		// 
+		
+		int newPossibleItems = 0;
+
 		if(!GameManager.Instance.possibleItems[3]) {
 			// to do
 		}
-
+		
+		newItems.text = newPossibleItems.ToString();
 	}
-
 
 	// interface buttons logic
 

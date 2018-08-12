@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 6 Food
   m_EditorClassIdentifier: 
   itemID: 6
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 70d726e9889a66e4c88c6a4b5e732dda, type: 3}
   itemName: Food
   itemDesc: 
   chance: 100

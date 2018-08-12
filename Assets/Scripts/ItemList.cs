@@ -29,7 +29,7 @@ public class ItemList : MonoBehaviour {
 	void Awake() {
 		if(instance == null) {
 			instance = this;
-			DontDestroyOnLoad(this);
+			//DontDestroyOnLoad(this);
 		} else if(instance != this) {
 			Destroy(this.gameObject);
 		}
@@ -44,7 +44,8 @@ public class ItemList : MonoBehaviour {
 
 		// if max amount just finish game
 		if(itemsInInventory >= 6 && newItems.Count <= 0) {
-			FinishController.Instance.FinishGame();
+			if(!FinishController.Instance.isFinish)
+				FinishController.Instance.FinishGame();
 		}
 
 		// move item from object to ui

@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: bcadbe91596dbeb43b7087bccf0e6caa
+guid: 74386293dd404244987489bde04b324f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: castle_0
-    21300002: castle_1
+    21300000: bonfire_0
+    21300002: bonfire_1
   externalObjects: {}
   serializedVersion: 6
   mipmaps:
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: castle_0
+      name: bonfire_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 30
-        width: 50
-        height: 30
+        y: 20
+        width: 32
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,19 +111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ca4427764ac1684dbfe5cf9d72f043c
+      spriteID: 4153d9118ecc2534d88af1c49a5e58af
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: castle_1
+      name: bonfire_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
-        height: 30
+        width: 32
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9c51f0b3ef0b374683dadbe70233d74
+      spriteID: df77b82a142e28e44869befa9787783e
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fb1a062fe94680346a3da21002b2a546
+    spriteID: 155cae0e42c87ca43a017e8f75dbee96
     vertices: []
     indices: 
     edges: []

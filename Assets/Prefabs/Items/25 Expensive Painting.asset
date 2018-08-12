@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 25 Expensive Painting
   m_EditorClassIdentifier: 
   itemID: 25
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 2585fdffac831d048acc01f1471d6268, type: 3}
   itemName: Expensive Painting
   itemDesc: 
   chance: 50
