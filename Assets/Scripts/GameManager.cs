@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 
 	public bool[] unlockedItems;
 	public bool[] possibleItems;
+	public int[] amountItems;
 
 	// unity functions
 	void Awake() {
@@ -35,12 +36,12 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		unlockedItems = new bool[28];
 		possibleItems = new bool[28];
+		amountItems = new int[28];
 
 		LoadData.Load();
 	}
 
 	void Update () {
-		
 	}
 
 	// game manager functions

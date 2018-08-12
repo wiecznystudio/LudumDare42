@@ -25,7 +25,7 @@ public class EffectController : MonoBehaviour {
 	void Awake () {
 		if(instance == null) {
 			instance = this;
-			DontDestroyOnLoad(this.gameObject);
+			//DontDestroyOnLoad(this.gameObject);
 		} else if(instance != this) {
 			Destroy(this.gameObject);
 		}

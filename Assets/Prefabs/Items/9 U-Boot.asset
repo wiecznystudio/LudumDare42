@@ -15,4 +15,6 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 721426b56767ced4c93cac42b847fc20, type: 3}
   itemName: U-Boot
   itemDesc: 
-  chance: 0
+  chance: 50
+  rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
+  score: 3000

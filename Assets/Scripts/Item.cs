@@ -10,5 +10,7 @@ public class Item : ScriptableObject {
 	public string itemName;
 	public string itemDesc;
 	public float chance;
+	public Color rare = new Color32(18, 47, 44, 100);
+	public int score;
 
 }

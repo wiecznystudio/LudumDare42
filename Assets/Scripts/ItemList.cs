@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemList : MonoBehaviour {
 	
@@ -16,6 +17,9 @@ public class ItemList : MonoBehaviour {
 	public int itemsInInventory = 0;
 
 	public ItemPanel[] itemPanels;
+	public Text scoreText;
+	public float score = 0f;
+	public float newScore = 0f;
 
 	private List<GameObject> newItems = new List<GameObject>();
 	private List<int> newItemDest = new List<int>();
@@ -32,6 +36,18 @@ public class ItemList : MonoBehaviour {
 	}
 
 	void Update() {
+
+		if(score != newScore) {
+			score = Mathf.Lerp(score, newScore, 0.04f);
+			scoreText.text = Mathf.Round(score).ToString();
+		}
+
+		// if max amount just finish game
+		if(itemsInInventory >= 6 && newItems.Count <= 0) {
+			FinishController.Instance.FinishGame();
+		}
+
+		// move item from object to ui
 		for(int i = 0; i < newItems.Count; i++) {
 			// lerp of items positions to ui positions
 			newItems[i].transform.position = Vector3.Lerp(newItems[i].transform.position, 
@@ -50,13 +66,19 @@ public class ItemList : MonoBehaviour {
 
 	// item list functions
 	public void AddItem(int itemID, Vector3 pos) {
+		// max amount limited
+		if(itemsInInventory >= 6)
+			return;
+
 		pos.z = -4f;
 		GameObject newItem = Instantiate(itemPattern, pos, Quaternion.identity);
 		newItem.GetComponent<SpriteRenderer>().sprite = items[itemID].itemIcon;
 		newItems.Add(newItem);
 		newItemDest.Add(itemsInInventory);
 		newItemID.Add(itemID);
+		newScore += items[itemID].score;
 		itemsInInventory++;
 	}
+
 
 }

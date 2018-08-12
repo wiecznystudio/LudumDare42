@@ -15,4 +15,5 @@ MonoBehaviour:
   itemIcon: {fileID: 0}
   itemName: Trash
   itemDesc: 
-  chance: 0
+  chance: 100
+  rare: {r: 0.745283, g: 0.6925507, b: 0.72963166, a: 1}

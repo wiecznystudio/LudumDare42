@@ -28,11 +28,12 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
 		// player gang movement
-		if(Input.GetMouseButtonDown(0)) {
+		if(Input.GetMouseButtonDown(0) && !FinishController.Instance.isFinish) {
 			Vector2 mousePos = Input.mousePosition;
 			destination = cam.ScreenToWorldPoint(mousePos);
 			destination.z = transform.position.z;
 		}
+
 
 		if(destination != transform.position) {
 			if(destination == Vector3.zero)
@@ -50,14 +51,17 @@ public class PlayerController : MonoBehaviour {
 				FlipX(true);
 			}
 			
-			if(isCollide)
-				return;
-
 			// move anim
 			if(!isMoving) {
 				SetAnimation("GuyMove");
 				isMoving = true;
 			}
+
+			if(isCollide) {
+				//RandomFlipX();	
+				return;
+			}
+
 			// stop if almost in destination
 			if(Vector3.Distance(transform.position, destination) <= 0.05f) {
 				transform.position = destination;
@@ -69,20 +73,28 @@ public class PlayerController : MonoBehaviour {
 	}
 	// destrony anim when on object
 	void OnTriggerStay2D(Collider2D other) {
-		if(isCollide)
-			return;
+		 if(isCollide)
+		 	return;
 
-		isCollide = true;
 		SetAnimation("GuyDestroy");	
+		isCollide = true;
 	}
 	void OnTriggerExit2D(Collider2D other) {
 		isCollide = false;
+		isMoving = false;
 	}
 
 	// player controller functions
 	void FlipX(bool x) {
 		foreach(SpriteRenderer sr in renderers) {
 			sr.flipX = x;
+		}
+	}
+	void RandomFlipX() {
+		foreach(SpriteRenderer sr in renderers) {
+			int random = Random.Range(0, 2);
+			if(random == 0) sr.flipX = false;
+			else sr.flipX = true;
 		}
 	}
 	void SetAnimation(string animation) {

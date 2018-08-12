@@ -15,4 +15,6 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 90d9ac30cab18d1468d15992aebbbee6, type: 3}
   itemName: Golden Showel
   itemDesc: 
-  chance: 0
+  chance: 20
+  rare: {r: 1, g: 0.76686984, b: 0, a: 1}
+  score: 16500

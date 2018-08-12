@@ -12,6 +12,6 @@ public class ItemPanel : MonoBehaviour {
 		item = newItem;
 		itemImage.sprite = item.itemIcon;
 		itemImage.color = new Color32(255, 255, 255, 255);
-		GetComponent<Image>().color = new Color32(120, 72, 94, 255);
+		GetComponent<Image>().color = item.rare;
 	}
 }

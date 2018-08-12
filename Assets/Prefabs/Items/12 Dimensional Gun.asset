@@ -15,4 +15,6 @@ MonoBehaviour:
   itemIcon: {fileID: 0}
   itemName: Dimensional Gun
   itemDesc: 
-  chance: 0
+  chance: 50
+  rare: {r: 0.16237983, g: 0.47870195, b: 0.8396226, a: 1}
+  score: 10100

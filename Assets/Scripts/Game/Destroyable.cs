@@ -14,7 +14,7 @@ public class Destroyable : MonoBehaviour {
 	private int smokeId;
 
 	// items
-	public int itemDrop;
+	public int[] itemDrop;
 
 	// unity functions
 	void Update() {
@@ -45,11 +45,16 @@ public class Destroyable : MonoBehaviour {
 	// object functions
 
 	void ChooseItem() {
-
-		ItemList.Instance.AddItem(itemDrop, this.transform.position);
+		for(int i = itemDrop.Length-1; i >= 0; i--) { // for every possible drop
+			if(GameManager.Instance.possibleItems[itemDrop[i]]) { // check if its possible (unlocked)
+				float percent = Random.Range(0f, 100f); // calculate chance
+				if(percent <= ItemList.Instance.items[itemDrop[i]].chance) { // if win add item
+					ItemList.Instance.AddItem(itemDrop[i], this.transform.position);
+					return;
+				}
+			}
+		}
 	}
-
-
 
 	// check if player is on object
 	void OnTriggerEnter2D(Collider2D other) {

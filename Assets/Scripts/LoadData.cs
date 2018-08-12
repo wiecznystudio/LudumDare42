@@ -14,15 +14,17 @@ public class LoadData : MonoBehaviour {
 			// load possible items
 			int possible = PlayerPrefs.GetInt("possibleItem" + i, 0);
 			GameManager.Instance.possibleItems[i] = (possible == 1);
+
+			// load amount of items
+			int amount = PlayerPrefs.GetInt("amountItem" + i, 0);
+			GameManager.Instance.amountItems[i] = amount;
 		}
+
+
 		// default value
 		GameManager.Instance.possibleItems[0] = true;
 		GameManager.Instance.possibleItems[1] = true;
 		GameManager.Instance.possibleItems[2] = true;
-		GameManager.Instance.possibleItems[3] = true;
-		GameManager.Instance.unlockedItems[0] = true;
-		GameManager.Instance.unlockedItems[1] = true;
-		GameManager.Instance.unlockedItems[11] = true;
 		
 	}
 }
