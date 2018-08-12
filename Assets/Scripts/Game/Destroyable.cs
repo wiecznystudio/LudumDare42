@@ -14,6 +14,7 @@ public class Destroyable : MonoBehaviour {
 	private int smokeId;
 
 	// items
+	public int objectID;
 	public int[] itemDrop;
 
 	// unity functions
@@ -37,6 +38,7 @@ public class Destroyable : MonoBehaviour {
 				explosionIsPlaying = true;
 				this.GetComponent<Collider2D>().enabled = false;
 				this.GetComponent<SpriteRenderer>().sprite = destroySprite;
+				GameManager.Instance.amountObjects[objectID]++;
 				ChooseItem();
 			}
 		}

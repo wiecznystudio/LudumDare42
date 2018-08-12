@@ -13,11 +13,17 @@ public class FinishController : MonoBehaviour {
 	}
 
 	// variables
-	public bool isFinish = false;
+	public bool isFinish = false, isAwake = false;
 	public Animator gameAnim;
 
 	public Text[] itemText;
 	public Text newItems;
+
+	public Image finishBlackPanel;
+	public GenerateMap generateMap;
+
+	private float finishTimer = 0;
+	private bool darker = false, generated = false;
 
 	// unity functions
 	void Awake () {
@@ -29,7 +35,38 @@ public class FinishController : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+		if(!generated) {
+			generated = generateMap.Generate();
+			return;
+		}
+
+		if(!isAwake) {
+			if(finishBlackPanel.color.a >= 0f) 
+				finishBlackPanel.color -= new Color(0, 0, 0, 0.03f);
+			else {
+				finishBlackPanel.enabled = false;
+				isAwake = true;
+			}
+		}
+ 		
+		if(Input.GetKeyDown(KeyCode.Escape)) {
+			finishTimer = 3f;
+			isFinish = true;
+		}
+
+		if(!isFinish) 
+			return;
+
+		finishTimer += Time.deltaTime;
+
+		if(finishTimer >= 4.5f) {
+			SceneManager.LoadScene(0);
+		} else if(finishTimer >= 3f) {
+			finishBlackPanel.enabled = true;
+			if(finishBlackPanel.color.a <= 1f)
+				finishBlackPanel.color += new Color(0, 0, 0, 0.03f);
+		} 
+
 	}
 
 	// finish controller functions
@@ -42,7 +79,6 @@ public class FinishController : MonoBehaviour {
 		for(int i = 0; i < ItemList.Instance.itemsInInventory; i++) {
 			itemText[i].text = ItemList.Instance.itemPanels[i].item.itemName;
 		}
-
 		// add unlocked items
 		for(int i = 0; i < ItemList.Instance.itemsInInventory; i++) {
 			int item = ItemList.Instance.itemPanels[i].item.itemID;
@@ -54,7 +90,6 @@ public class FinishController : MonoBehaviour {
 		CheckForPossible();
 		SaveData.Save();
 	}
-
 	void CheckForPossible() {
 		
 		int newPossibleItems = 0;
@@ -66,13 +101,5 @@ public class FinishController : MonoBehaviour {
 		newItems.text = newPossibleItems.ToString();
 	}
 
-	// interface buttons logic
-
-	public void Restart() {
-		SceneManager.LoadScene(1);
-	}
-
-	public void Exit() {
-		SceneManager.LoadScene(0);
-	}
+	
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class LoadData : MonoBehaviour {
 
 	public static void Load() {
-		
 		for(int i = 0; i < 28; i++) {
 			// load ulocked items
 			int unlocked = PlayerPrefs.GetInt("unlockedItem" + i, 0);
@@ -18,6 +17,12 @@ public class LoadData : MonoBehaviour {
 			// load amount of items
 			int amount = PlayerPrefs.GetInt("amountItem" + i, 0);
 			GameManager.Instance.amountItems[i] = amount;
+		}
+
+		for(int i = 0; i < 12; i++) {
+			// load amount of objects
+			int objects = PlayerPrefs.GetInt("amountObject" + i, 0);
+			GameManager.Instance.amountObjects[i] = objects;
 		}
 
 

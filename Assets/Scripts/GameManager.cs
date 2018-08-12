@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 	public bool[] unlockedItems;
 	public bool[] possibleItems;
 	public int[] amountItems;
+	public int[] amountObjects;
 
 	// unity functions
 	void Awake() {
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour {
 		unlockedItems = new bool[28];
 		possibleItems = new bool[28];
 		amountItems = new int[28];
+		amountObjects = new int[28];
 
 		LoadData.Load();
 	}
@@ -58,6 +60,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void Stats() {
+		MenuStat[] stats = Transform.FindObjectsOfType<MenuStat>();
+		foreach(MenuStat stat in stats) {
+			stat.UpdateData();
+		}
 		menuAnimator.Play("MenuToStats");
 	}
 	public void ExitGame() {

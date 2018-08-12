@@ -16,6 +16,10 @@ public class SaveData : MonoBehaviour {
 			// save amount of items
 			PlayerPrefs.SetInt("amountItem" + i, GameManager.Instance.amountItems[i]);
 		}
+		for(int i = 0; i < 12; i++) {
+			// save amount of objects
+			PlayerPrefs.SetInt("amountObject" + i, GameManager.Instance.amountObjects[i]);
+		}
 
 		PlayerPrefs.Save();
 	}

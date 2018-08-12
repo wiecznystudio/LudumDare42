@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroySprite: {fileID: 21300002, guid: bcadbe91596dbeb43b7087bccf0e6caa, type: 3}
   destroyTime: 2.5
+  objectID: 0
   itemDrop: 020000001400000019000000
 --- !u!212 &212760582115370964
 SpriteRenderer:

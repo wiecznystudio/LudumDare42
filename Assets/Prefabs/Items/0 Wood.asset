@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 0
   itemIcon: {fileID: 21300000, guid: 861fdd56796a24a4ebd4a2bf0fdf9a70, type: 3}
-  itemName: Wooden Plank
-  itemDesc: 
+  itemName: Wood
+  itemDesc: Wood is wood, grows on the trees, nothing special.
   chance: 100
   rare: {r: 0.745283, g: 0.6925507, b: 0.72963166, a: 1}
   score: 10

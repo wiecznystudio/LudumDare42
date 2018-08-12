@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 			Vector2 mousePos = Input.mousePosition;
 			destination = cam.ScreenToWorldPoint(mousePos);
 			destination.z = transform.position.z;
+			if(!SoundManager.Instance.IsPlaying()) SoundManager.Instance.Play(0);
 		}
 
 
@@ -68,15 +69,21 @@ public class PlayerController : MonoBehaviour {
 				destination = Vector3.zero;
 				SetAnimation("GuyIdle");
 				isMoving = false;
+				SoundManager.Instance.Stop();
 			}
 		}
 	}
 	// destrony anim when on object
 	void OnTriggerStay2D(Collider2D other) {
+		if(Vector3.Distance(transform.position, destination) <= 0.05f) 
+			SoundManager.Instance.Stop();
+
 		 if(isCollide)
 		 	return;
 
-		SetAnimation("GuyDestroy");	
+		if(Vector3.Distance(transform.position, destination) <= 0.05f)
+			SetAnimation("GuyDestroy");	
+
 		isCollide = true;
 	}
 	void OnTriggerExit2D(Collider2D other) {

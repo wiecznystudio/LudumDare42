@@ -14,7 +14,7 @@ MonoBehaviour:
   itemID: 4
   itemIcon: {fileID: 21300000, guid: ebfcae5cab825a34fa0d8b2d1006e9dd, type: 3}
   itemName: Trash
-  itemDesc: 
+  itemDesc: What? Just be eco, clean up after yourself.
   chance: 100
   rare: {r: 0.745283, g: 0.6925507, b: 0.72963166, a: 1}
   score: 0

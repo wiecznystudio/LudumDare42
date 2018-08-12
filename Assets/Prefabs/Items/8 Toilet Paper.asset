@@ -14,7 +14,7 @@ MonoBehaviour:
   itemID: 8
   itemIcon: {fileID: 21300000, guid: 2a2009e3e96b53e4cb085f1db9200dab, type: 3}
   itemName: Toilet Paper
-  itemDesc: 
+  itemDesc: 'It always disappear when you need it the most. '
   chance: 100
   rare: {r: 0.745283, g: 0.6925507, b: 0.72963166, a: 1}
   score: 300
